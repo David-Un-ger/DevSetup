@@ -1,0 +1,10 @@
+FROM python:3.11.0
+
+RUN /usr/local/bin/python -m pip install ipykernel -U --user --force-reinstall
+
+
+WORKDIR /usr/src/app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
