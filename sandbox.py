@@ -10,4 +10,3 @@ with open("config.toml", "rb") as f:
 config
 # %%
 config.title
-# %%
