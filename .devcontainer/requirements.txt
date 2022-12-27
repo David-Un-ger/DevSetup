@@ -1,2 +1,4 @@
-numpy
 python-box
+torchsummary
+comet_ml
+

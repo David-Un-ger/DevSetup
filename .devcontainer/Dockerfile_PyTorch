@@ -1,5 +1,5 @@
 # https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch
-FROM nvcr.io/nvidia/pytorch:22.09-py3
+FROM nvcr.io/nvidia/pytorch:22.12-py3
 
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt

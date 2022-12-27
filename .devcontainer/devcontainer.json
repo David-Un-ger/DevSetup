@@ -7,7 +7,7 @@
 	
 	"name": "DockerDevContainer",
 	"context": ".",
-	"dockerFile": "Dockerfile_Python311",
+	"dockerFile": "Dockerfile_PyTorch",
 	"remoteUser": "root",
 
 	// additional settings
@@ -46,9 +46,14 @@
 		"ms-python.black-formatter",
 		"bierner.markdown-mermaid"
 	],
-
-	"mounts": [
-		"source=/media/david/CCD466BBD466A802/nuscenes,target=/nuscenes,type=bind,consistency=cached"
+	"volumes": [
+		"source=C:/Users/david/.gitignore,target=/etc/gitconfig"
+		//"source=/media/david/CCD466BBD466A802/nuscenes,target=/nuscenes,type=bind,consistency=cached"
 	  ]
+/*
+	"mounts": [
+		"source=C:/Users/david/.gitignore,target=/etc/gitconfig,type=bind"
+		//"source=/media/david/CCD466BBD466A802/nuscenes,target=/nuscenes,type=bind,consistency=cached"
+	  ]*/
 	
 }
