@@ -46,14 +46,14 @@
 		"ms-python.black-formatter",
 		"bierner.markdown-mermaid"
 	],
-	"volumes": [
-		"source=C:/Users/david/.gitignore,target=/etc/gitconfig"
+
+	"mounts": [
+		//"source=%SYSTEMDRIVE%\Users\david\.gitignore,target=/etc/gitconfig,type=bind,consistency=cached",
+		//"source=${localEnv:HOME}${localEnv:USERPROFILE},target=/userprofile,type=bind,consistency=cached",
+		//"source=C:\\Users\\david,target=/userHome,type=bind,consistency=cached",
+		"source=C:\\Users\\david\\.gitconfig,target=/etc/gitconfig,type=bind,consistency=cached",
+		"source=C:\\GoogleDriveNot\\Datasets,target=/datasets,type=bind,consistency=cached"
 		//"source=/media/david/CCD466BBD466A802/nuscenes,target=/nuscenes,type=bind,consistency=cached"
 	  ]
-/*
-	"mounts": [
-		"source=C:/Users/david/.gitignore,target=/etc/gitconfig,type=bind"
-		//"source=/media/david/CCD466BBD466A802/nuscenes,target=/nuscenes,type=bind,consistency=cached"
-	  ]*/
 	
 }
