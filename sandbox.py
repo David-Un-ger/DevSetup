@@ -1,12 +1,13 @@
 # %%
 
 import numpy as np
-import tomllib 
+import toml#lib 
 from box import Box
+import torch
+import pathlib
 
-with open("config.toml", "rb") as f:
-    config = Box(tomllib.load(f))
+path = pathlib.Path("config.toml")
+config = pathlib.Path.read_text(path)
+config = Box(toml.loads(config))
 # %%
-config
-# %%
-config.title
+print("Cuda available: ", torch.cuda.is_available())
