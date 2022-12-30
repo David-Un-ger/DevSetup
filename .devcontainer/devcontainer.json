@@ -9,38 +9,10 @@
 	"context": ".",
 	"dockerFile": "Dockerfile_PyTorch",
 	"remoteUser": "root",
-	"runArgs": ["--gpus",
-				"all"],				
 
-	// additional settings
-
-	/*
-	// for conda only
-	"settings": { 
-		"python.defaultInterpreterPath": "/opt/conda/bin/python",
-		"python.linting.enabled": true,
-		"python.linting.pylintEnabled": true,
-		"python.formatting.autopep8Path": "/opt/conda/bin/autopep8",
-		"python.formatting.yapfPath": "/opt/conda/bin/yapf",
-		"python.linting.flake8Path": "/opt/conda/bin/flake8",
-		"python.linting.pycodestylePath": "/opt/conda/bin/pycodestyle",
-		"python.linting.pydocstylePath": "/opt/conda/bin/pydocstyle",
-		"python.linting.pylintPath": "/opt/conda/bin/pylint"
-	},
-	*/
-
-	// for python only
-	"settings": { 
-		"python.defaultInterpreterPath": "/usr/local/bin/python",
-		"python.linting.enabled": true,
-		"python.linting.pylintEnabled": true,
-		"python.formatting.autopep8Path": "/usr/local/bin/autopep8",
-		"python.formatting.yapfPath": "/usr/local/bin/yapf",
-		"python.linting.flake8Path": "/usr/local/bin/flake8",
-		"python.linting.pycodestylePath": "/usr/local/bin/pycodestyle",
-		"python.linting.pydocstylePath": "/usr/local/bin/pydocstyle",
-		"python.linting.pylintPath": "/usr/local/bin/pylint"
-	},
+	// comment --gpus all in in case of GPU connected
+	//"runArgs": ["--gpus",
+	//			"all"],				
 
 	"extensions": [
 		"ms-python.python",
@@ -53,6 +25,38 @@
 		"source=C:\\Users\\david\\.gitconfig,target=/etc/gitconfig,type=bind,consistency=cached",
 		"source=C:\\GoogleDriveNot\\Datasets,target=/datasets,type=bind,consistency=cached"
 		//"source=/media/david/CCD466BBD466A802/nuscenes,target=/nuscenes,type=bind,consistency=cached"
-	  ]
+	  ],
+	
+	"settings": { 
+
+		"files.autoSave": "off", //"afterDelay",
+		"editor.formatOnSave": false,
+		"[python]": {
+			"editor.formatOnSave": true,
+		},
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		},
+
+		// formatter
+		"editor.defaultFormatter": null,
+		"python.formatting.provider": "black",
+		"python.formatting.blackPath": "/usr/local/bin/black",
+		"python.formatting.blackArgs": [
+			"--line-length",
+			"120"
+		],
+
+		// linter
+		"python.languageServer": "Pylance",
+		"python.linting.enabled": true,
+		"python.linting.flake8Enabled": true,
+		"python.linting.flake8Args": [
+			"--max-line-length=120"
+		],
+
+		// git
+		"git.autofetch": true
+	}
 	
 }

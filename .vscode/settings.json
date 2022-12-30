@@ -1,0 +1,43 @@
+{
+    // jupyter
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "jupyter.interactiveWindowMode": "perFile",
+    "jupyter.alwaysTrustNotebooks": true,
+
+    // interpreter
+    //"python.pythonPath": "C:\\Scarlett\\base39\\Scripts",
+    //"python.condaPath": "C:\\ProgramData\\Anaconda3",
+    //"python.defaultInterpreterPath": "C:\\Scarlett\\base39\\Scripts",
+
+    // editor
+    "files.autoSave": "off", //"afterDelay",
+    "editor.formatOnSave": false,
+    "[python]": {
+        "editor.formatOnSave": true,
+    },
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+
+    // formatter
+    "editor.defaultFormatter": null,
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "120"
+    ],
+
+    // linter
+    "python.languageServer": "Pylance",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120"
+    ],
+
+    // git
+    "git.autofetch": true,
+}

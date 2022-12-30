@@ -1,4 +1,5 @@
 python-box
 torchsummary
 comet_ml
-
+black
+flake8
